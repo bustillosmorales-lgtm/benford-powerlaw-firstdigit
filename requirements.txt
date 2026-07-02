@@ -1,0 +1,4 @@
+# Reproducibility environment for "When the Benford law must fail".
+# Versions used to produce the published numbers (Python 3.12.10).
+numpy==2.4.6
+scipy==1.17.1

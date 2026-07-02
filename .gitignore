@@ -1,0 +1,10 @@
+# Large raw public archives are not committed (see docs/QUERIES.md + CHECKSUMS.md)
+*.zip
+*.csv
+*.txt
+!requirements.txt
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
