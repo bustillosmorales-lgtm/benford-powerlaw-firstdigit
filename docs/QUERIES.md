@@ -24,3 +24,12 @@ Archive integrity is fixed by `CHECKSUMS.md`.
 
 The exact `first_digit()` extraction rule and the handling of zeros, negatives
 and missing values are documented in `CLEANING.md`.
+
+## Live vs archived
+
+`recompute_table.py` loads seven rows from local archives (SEC, HYG, Dataverse,
+Dryad) or regenerates them from a seed/formula (simulated baselines, Fibonacci).
+Three rows — physical constants (NIST), World Bank and seismic (USGS) — are
+downloaded **live** from third-party APIs at run time and are not snapshotted
+here; they reproduce the exact N and estimators reported, but the endpoints are
+versioned and should be cached with a checksum for a permanent archive.

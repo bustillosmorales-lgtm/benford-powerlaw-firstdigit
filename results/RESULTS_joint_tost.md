@@ -1,9 +1,15 @@
 # Joint (k, phi) fit + TOST recompute of Table 4 (2026-07-02)
 
-Scripts: `joint_phi_tost.py` (estimator + P_{k,phi}), `recompute_table.py` (loads
-the 10 datasets from ../repro2, fits, bootstraps, TOST). Seed 20260702, B=600,
-delta=0.10, alpha=0.05, k>=1. Every dataset's observed first-digit vector is
-loaded from its archive (checksums in ../repro2), so the table is reproducible.
+Scripts: `joint_phi_tost.py` (estimator + P_{k,phi}), `recompute_table.py` (fits,
+bootstraps, TOST). Seed 20260702, B=600, delta=0.10, alpha=0.05, k>=1.
+
+Data sources: seven datasets load from local archives in ../repro2 (SEC EDGAR,
+HYG, Dataverse election, Dryad/Pruitt) or are regenerated from a seed/formula
+(the two simulated baselines, Fibonacci). THREE rows download live from
+third-party APIs at run time and are NOT snapshotted in ../repro2: physical
+constants (NIST allascii.txt), World Bank (SP.POP.TOTL API) and seismic (USGS
+ComCat). These reproduce the exact N and estimators today, but the endpoints are
+versioned; for a permanent record they should be cached with a checksum.
 
 ## Why joint (k, phi) with k >= 1
 
