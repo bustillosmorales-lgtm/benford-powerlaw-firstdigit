@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article and this archive."
+title: "When the Benford law must fail: reproducibility code"
+type: software
+authors:
+  - family-names: Bustillos
+    given-names: Francisco
+  - family-names: Leiva
+    given-names: Víctor
+    affiliation: "Pontificia Universidad Católica de Valparaíso, Chile"
+license: MIT
+repository-code: "https://github.com/bustillosmorales-lgtm/benford-powerlaw-firstdigit"
+keywords:
+  - Benford law
+  - first-digit test
+  - power-law distribution
+  - forensic statistics
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "When the Benford law must fail: A corrected first-digit test for power-law distributions"
+  authors:
+    - family-names: Bustillos
+      given-names: Francisco
+    - family-names: Leiva
+      given-names: Víctor
+  journal: "Chilean Journal of Statistics"
+  year: 2026

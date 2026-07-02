@@ -1,0 +1,19 @@
+{
+  "title": "When the Benford law must fail: reproducibility code",
+  "description": "Code and documentation reproducing every computed value in Bustillos and Leiva, \"When the Benford law must fail: A corrected first-digit test for power-law distributions\", Chilean Journal of Statistics, 2026. Includes the power-law first-digit law P_k, the joint (k, phi) minimum-chi-squared estimator (k>=1), the TOST equivalence decision, the parametric/nonparametric bootstrap, and the recomputation of the forensic table from public data.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {"name": "Bustillos, Francisco"},
+    {"name": "Leiva, Víctor", "affiliation": "Pontificia Universidad Católica de Valparaíso, Chile"}
+  ],
+  "keywords": [
+    "Benford law",
+    "first-digit test",
+    "power-law distribution",
+    "forensic statistics",
+    "goodness of fit",
+    "reproducibility"
+  ],
+  "access_right": "open"
+}
