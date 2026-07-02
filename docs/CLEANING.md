@@ -26,13 +26,24 @@ Applied uniformly to every dataset before extracting digits:
 
 `N` in the paper's tables is the count of retained values after these rules.
 
-## Scale normalization (phi = 0)
+## Scale phase (jointly estimated, k >= 1)
 
-The corrected test is applied to scale-normalized data. Each dataset is divided
-by `10 ** round(mean(log10(|x|)))` before the digits are read, which fixes the
-scale phase `phi = 0` and leaves the first-digit deviations unchanged. Only the
-exponent `k` is then estimated, so the corrected test carries seven degrees of
-freedom.
+The corrected test does NOT normalize the scale (dividing by an integer power of
+ten leaves every first digit unchanged, so it cannot fix the phase). Instead the
+exponent `k` and the scale phase `phi = {log10 C}` are estimated jointly by
+minimum chi-squared against the scale-phase family `P_{k,phi}`, over the
+physical range `k >= 1`. The `k >= 1` restriction is essential: with `phi` free
+and `k` unrestricted, the two-parameter family over-fits the nine digit cells (a
+degenerate small `k` with a phase mimics bounded-support data). Estimating both
+parameters gives 9 - 1 - 2 = 6 degrees of freedom. See `joint_phi_tost.py`.
+
+## Forensic verdict (TOST equivalence)
+
+Because the corrected statistic is a consistent goodness-of-fit statistic, a
+point-null p-value rejects any large sample. The verdict is instead an
+equivalence decision (TOST): the data are consistent with a power law when the
+upper 95% nonparametric-bootstrap bound on `psi_corr` falls below the margin
+`delta = 0.10`, and anomalous otherwise.
 
 ## Determinism
 

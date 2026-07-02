@@ -17,8 +17,12 @@ calibrated first-digit test built on the power-law first-digit law
 code/
   benford_powerlaw.py   analytical tables, N_min(k), contamination law,
                         seeded simulated baselines, Fibonacci case
-  bootstrap.py          parametric-bootstrap calibration of the corrected
-                        test (N*psi_corr, df=7, p-values; Table on real data)
+  joint_phi_tost.py     scale-phase law P_{k,phi}, the JOINT (k,phi)
+                        minimum-chi-squared estimator (k>=1, 6 df), and the
+                        TOST equivalence decision
+  recompute_table.py    loads every dataset from ../repro2, runs the joint fit,
+                        bootstrap and TOST -> the forensic Table (Table 4)
+  bootstrap.py          earlier phi=0 parametric-bootstrap calibration (df=7)
   fetch_real_data.py    downloads the public validation datasets by API and
                         recomputes their first-digit indices
 docs/
