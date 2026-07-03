@@ -22,6 +22,10 @@ code/
                         TOST equivalence decision
   recompute_table.py    loads every dataset from ../repro2, runs the joint fit,
                         bootstrap and TOST -> the forensic Table (Table 4)
+  verification.py       numerical verification of the analytical results:
+                        P_k exactness, the Pietronero identity, monotonicity,
+                        the contamination identity, N_min, joint (k,phi)
+                        injectivity, and the 6/7/8 degrees of freedom
   bootstrap.py          earlier phi=0 parametric-bootstrap calibration (df=7)
   fetch_real_data.py    downloads the public validation datasets by API and
                         recomputes their first-digit indices
