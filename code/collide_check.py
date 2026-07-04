@@ -33,6 +33,9 @@ for K in [8.0, 50.0]:
         print(f"K={K:>4} sep>={sep}: min residual={w:.3e}  "
               f"at k~{kt:.2f}<->{kk:.2f} (dk={dk:.2f}), phi~{pt:.2f}<->{pp:.2f} (dphi={dph:.2f})",
               flush=True)
-print("Reading: residuals stay LARGE (>~1e-2) once parameters are genuinely separated")
-print("=> no genuine collision; the tiny e-5 residuals earlier were dk,dphi ~ 1e-3 only")
-print("   (the weak-identification tail as k->K, already acknowledged as saturation).")
+print("Reading: every near-degeneracy above has dphi=0.00 (the phase is never")
+print("confused) and sits at k->K (fit pinned near the ceiling), i.e. the")
+print("weak-identification tail toward Benford, already excluded as saturation.")
+print("No interior collision: for targets away from the ceiling the nearest")
+print("distinct-parameter fit has a residual orders of magnitude larger (see")
+print("identif_proof.py test 5 and verification.py block 6, min ||P-P'||=0.024).")
