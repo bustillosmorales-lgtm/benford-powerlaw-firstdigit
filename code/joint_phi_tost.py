@@ -14,7 +14,7 @@ so 9 - 1 - 2 = 6 degrees of freedom.
 TOST / equivalence: to decide "close enough to a power law" at large N without the
 statistic rejecting every real dataset, test
     H0: psi_corr >= delta   vs   H1: psi_corr < delta,
-via the parametric bootstrap upper confidence bound on psi_corr.
+via the nonparametric (multinomial) bootstrap upper confidence bound on psi_corr.
 
 This module validates the estimator on simulated data; the full table recompute
 loads each dataset's observed first-digit vector (see recompute_table.py).
